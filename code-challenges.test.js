@@ -16,11 +16,57 @@
 
 const numbersArray1 = [6, 7, 8, 9, 10]
 // Expected output: [18, 21, 24, 27, 30]
+
+// declare a function that takes in an array
+// const numbersArray1 = [6, 7, 8, 9, 10]
+
+// create a local variable that maps through each number of the array multiply by the numbers [2, 3, 4, 3, 3]
+// let eachItem = array.map(value => value * 2)
+// let eachItem = array.map(value => value * 3)
+// let eachItem = array.map(value => value * 4)
+// let eachItem = array.map(value => value * 3)
+// let eachItem = array.map(value => value * 3)
+
+
+const numbersArray1 = [6, 7, 8, 9, 10] => {
+
+}
+
+describe('should multiply',() =>{
+    it('should multiply',() =>{
+        expect((6 * 2)).toBe(18);
+    });
+})
+
+
+
 const numbersArray2 = [24, 27, 30, 33, 36]
 // Expected output: [72, 81, 90, 99, 108]
 
+// declare a function that takes in an array
+// const numbersArray2 = [24, 27, 30, 33, 36]
+
+// create a local variable that maps through each number of the array and multiplies it by 3
+// let eachItem = array.map(value => value * 3)
+
+const numbersArray2 = [24, 27, 30, 33, 36] => {
+
+}
+
+describe('should multiply',() =>{
+    it('should multiply',() =>{
+        expect(*(3)).toBe();
+    });
+})
+
+
+
 
 // b) Create the function that makes the test pass.
+
+const numbersArray2 = (24, 27, 30, 33, 36) => {
+  return numbersArray2.multBy3()
+}
 
 
 
@@ -46,13 +92,32 @@ const num3 = -7
 
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
+
+describe("randomNouns1", () => {
+  let randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+  let result = ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew]
+  it("adds capitalized to the start of an array", () => {
+    expect(capitalized(randomNouns1)).toEqual(result)
+  })
+})
+
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
+describe("randomNouns2", () => {
+  let randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
+  let result = ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
+  it("adds capitalized to the start of an array", () => {
+    expect(capitalized(randomNouns2)).toEqual(result)
+  })
+})
 
 // b) Create the function that makes the test pass.
 
-
+const capitalize = require('./capitalize');
+test('returns the first letter capitalized', () => {
+  expect(capitalize('temperature', 'database', 'chopsticks','mango', 'deduction')).toBe('Temperature', 'Database', 'Chopsticks', 'Mango', 'Deduction');
+});
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
@@ -60,6 +125,7 @@ const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deducti
 
 const vowelTester1 = "learn"
 // Expected output: 1
+
 const vowelTester2 = "academy"
 // Expected output: 0
 const vowelTester3 = "challenges"
