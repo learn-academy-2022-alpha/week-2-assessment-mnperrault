@@ -142,6 +142,18 @@ test('returns the first letter capitalized', () => {
   expect(capitalize('temperature', 'database', 'chopsticks','mango', 'deduction')).toBe('Temperature', 'Database', 'Chopsticks', 'Mango', 'Deduction');
 });
 
+
+describe('capitalize', () => {
+
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it('returns the first letter capitalize', () => {
+
+    //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+    expect(capitalize('temperature', 'database', 'chopsticks','mango', 'deduction')).toEqual('Temperature', 'Database', 'Chopsticks', 'Mango', 'Deduction'")
+  })
+})
+
+
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
 // a) Create a test with expect statements for each of the variables provided.
@@ -169,3 +181,14 @@ const vowelTester = require('./vowelTester');
 test('returns the first vowel', () => {
   expect(vowelTester('e', 'a', 'a');
 });
+
+
+describe('vowelTester', () => {
+
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it('returns the first vowel', () => {
+
+    //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+    expect(voweltester()).toEqual("'e', 'a', 'a')")
+  })
+})
