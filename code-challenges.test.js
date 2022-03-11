@@ -107,88 +107,153 @@ const divisibleByThree = (number) => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
-// create a function - arrayCapitalizer
-// parameter - array
-// change someething to each item in an array - intepretation
-// requirements of iteration - length is not going to change, going from array to array by mapping over the array
-// the value of map will be a string - capitalize
-
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
-
-describe("randomNouns1", () => {
-  let randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
-  let result = ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew]
-  it("adds capitalized to the start of an array", () => {
-    expect(capitalized(randomNouns1)).toEqual(result)
-  })
-})
-
 const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
-
-describe("randomNouns2", () => {
-  let randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
-  let result = ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
-  it("adds capitalized to the start of an array", () => {
-    expect(capitalized(randomNouns2)).toEqual(result)
-  })
-})
-
-// b) Create the function that makes the test pass.
-
-const capitalize = require('./capitalize');
-test('returns the first letter capitalized', () => {
-  expect(capitalize('temperature', 'database', 'chopsticks','mango', 'deduction')).toBe('Temperature', 'Database', 'Chopsticks', 'Mango', 'Deduction');
-});
-
-
-describe('capitalize', () => {
+// // a describe method that lists the name of the function OR naming of the particular test.
+describe("toCapital", () => {
 
   // a test/it method, nested within the describe block, that in plain words, describes that the function does.
-  it('returns the first letter capitalize', () => {
+  it("takes in an array of strings and returns an array with all the words capitalized.", () => {
+    const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+    // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
+    const randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
+    // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
+// b) Create the function that makes the test pass.
     //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
-    expect(capitalize('temperature', 'database', 'chopsticks','mango', 'deduction')).toEqual('Temperature', 'Database', 'Chopsticks', 'Mango', 'Deduction'")
+    expect(toCapital(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+    expect(toCapital(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
   })
 })
+// // Got Red.
+// ReferenceError: toCapital is not defined
+
+// b) Create the function that makes the test pass.
+// Pseudo Code:
+// Create a function named toCapital.
+// Have it take in array of words
+// Use  the .map method as a way to return a whole array
+// Input something to make the first letter of the string toUpperCase
+// Seperate the first letter of the strings from the rest
+// Join the words back together
+// Returns an array with all first letter of the words capitalized
+
+const toCapital = (string) => {
+  // const words = array.split(",")
+  // return string.chartAt(0).toUpperCase() + string.slice(1)
+  return string.map(string => string.charAt(0).toUpperCase() + string.slice(1))
+}
+// const word.map(capitalize.join(" ")
+
+// Got Green.
+
 
 
 // --------------------3) Create a function that takes in a string and logs the index of the first vowel.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-// create a function that takes in a string and logs the index of the first vowel
-// change someething to each item in an array - first vowel
-// requirements of iteration - length is not going to change, going from array to array by mapping over the array
-// the value of map will be a string - first vowel
-
 const vowelTester1 = "learn"
 // Expected output: 1
-
 const vowelTester2 = "academy"
 // Expected output: 0
 const vowelTester3 = "challenges"
 // Expected output: 2
-expect((function-name()).toEqual(exact-output)
-expect((function-name()).toEqual(exact-output)
-expect((function-name()).toEqual(exact-output)
-})
 
-
-// b) Create the function that makes the test pass.
-const vowelTester = require('./vowelTester');
-test('returns the first vowel', () => {
-  expect(vowelTester('e', 'a', 'a');
-});
-
-
-describe('vowelTester', () => {
+// a describe method that lists the name of the function OR naming of the particular test.
+describe("vowelLetter", () => {
 
   // a test/it method, nested within the describe block, that in plain words, describes that the function does.
-  it('returns the first vowel', () => {
+  it("takes in a string and logs the index of the first vowel", () => {
+    const vowelTester1 = "learn"
+    // Expected output: 1
+    const vowelTester2 = "academy"
+    // Expected output: 0
+    const vowelTester3 = "challenges"
+    // Expected output: 2
 
     //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
-    expect(voweltester()).toEqual("'e', 'a', 'a')")
+    expect(vowelLetter(vowelTester1)).toEqual(1)
+    expect(vowelLetter(vowelTester2)).toEqual(0)
+    expect(vowelLetter(vowelTester3)).toEqual(2)
   })
 })
+// Got Red!
+// vowelLetter is not defined.
+
+// b) Create the function that makes the test pass.
+//Pseudo Code:
+// Create a function named vowelLetter
+// Take in a string
+// Potentially use .length to go through each string. [Only for arrays?]
+// Will need to find the index of the first vowel
+// Likely need to list vowels
+// Return the first index of the first vowel
+
+const vowelLetter = (string) => {
+  // if(string = ("aeuouAEIOU"))
+  const strings = ("aeiouAEIOU")
+  return string.indexOf("0") !== -1
+  // (string[" "]) !== -1
+}
+
+// Did not get Green.
+// Unfortunately, I was not able to figure out this problem. I keep getting back out -1 or false for the received value.
+// Expected: 1
+//     Received: -1
+// Additionally, if I would set it to not equal -1 it will return
+// Expected: 1
+//    Received: false
+
+
+
+// --------------------3) Create a function that takes in a string and logs the index of the first vowel.
+
+// a) Create a test with expect statements for each of the variables provided.
+
+// const vowelTester1 = "learn"
+// Expected output: 1
+// const vowelTester2 = "academy"
+// Expected output: 0
+// const vowelTester3 = "challenges"
+// Expected output: 2
+
+// a describe method that lists the name of the function OR naming of the particular test.
+describe("vowelIndexFinder", () => {
+  const vowelTester1 = "learn"
+  const vowelTester2 = "academy"
+  const vowelTester3 = "challenges"
+  // a test/it method, nested within the describe block, that in plain words, describes that the function does.
+  it("logs the index of the first vowel.", () => {
+
+    //an expect method, nested within the test block, calling on the hello() function, followed by the .toEqual() matcher that checks the expected output of the function return.
+    expect(vowelIndexFinder(vowelTester1)).toEqual(1)
+    expect(vowelIndexFinder(vowelTester2)).toEqual(0)
+    expect(vowelIndexFinder(vowelTester3)).toEqual(2)
+  })
+})
+
+// Test failed.
+// ReferenceError: vowelIndexFinder is not defined
+
+// b) Create the function that makes the test pass.
+
+// Create a function called vowelIndexFinder that will take in one a string
+// Inside the function set a variable called splitString and assign it to string.split("")
+// Create a for loop that will loop through the variable splitString
+// The starting condition will be i=0, and the ending condition will be i<splitString.length, and how to respond i++
+// Inside the for loop, create a conditional statement explaining that if the value of the splitString at index i is strictly equal to a vowel (a, e, i, o, or u), then it will return the index i because the expected output of the function is the index inwhich the first vowel is displayed
+
+const vowelIndexFinder = (string) => {
+  let splitString = string.split("")
+  for(let i = 0; i<splitString.length; i++){
+    if(splitString[i] === "a" || splitString[i] === "e" || splitString[i] === "i" || splitString[i] === "o" || splitString[i] === "u"){
+      return i
+    }
+  }
+}
+
+// Got Green.
+
